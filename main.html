@@ -16,20 +16,7 @@
 
 <script  src="./script.js">
   //Your code goes here
-	const speed = document.querySelector('.speed');
-const bar = speed.querySelector('.speed-bar');
-const video = document.querySelector('.flex');
-
-speed.addEventListener('mousemove', function (e) {
-  const y = e.pageY - this.offsetTop; // mouse Y position inside .speed
-  const percent = y / this.offsetHeight; // percentage down the bar
-  const min = 0.5;   // minimum speed
-  const max = 2;     // maximum speed
-  const playbackRate = percent * (max - min) + min; // scale value
-  bar.style.height = `${Math.round(percent * 100)}%`; // adjust bar height
-  bar.textContent = `${playbackRate.toFixed(2)}×`;    // show speed
-  video.playbackRate = playbackRate;                  // set video speed
-});
+	
 </script>
 </body>
 </html>
